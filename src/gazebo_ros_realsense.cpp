@@ -156,6 +156,10 @@ namespace
     info_msg.P[6] = info_msg.K[5];
     info_msg.P[10] = info_msg.K[8];
 
+    // No distortion
+    info_msg.D.resize(5, 0.0);
+    info_msg.distortion_model = sensor_msgs::distortion_models::PLUMB_BOB;
+
     return info_msg;
   }
 }
